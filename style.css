@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 70px;
+  background-color: #EEE;
+}
+
+.navbar {
+  border-bottom: 3px solid #BBBBBB;
+  background: #EEE;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.culture-feed {
+	display: flex;
+}
+.culture-feed img {
+	width: 100%;
+	height: auto;
+	border: 1px solid #EEE;
+}
+
+.footer {
+  width: 100%;
+  color: #888;
+}
