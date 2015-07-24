@@ -16,13 +16,8 @@ body {
   font-weight: bold;
 }
 
-.culture-feed {
-	display: flex;
-}
-.culture-feed img {
-	width: 100%;
-	height: auto;
-	border: 1px solid #EEE;
+.col-xs-4, .col-md-4 {
+  padding:1px;
 }
 
 .footer {
