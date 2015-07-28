@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--
+  ____  _       _          _ _       _   _    _ _                           _
+ / __ \| |     | |        | | |     | | | |  | (_)                         | |
+| |  | | |__   | |__   ___| | | ___ | | | |__| |_ _ __ ___   _ __ ___   ___| |
+| |  | | '_ \  | '_ \ / _ \ | |/ _ \| | |  __  | | '__/ _ \ | '_ ` _ \ / _ \ |
+| |__| | | | | | | | |  __/ | | (_) |_| | |  | | | | |  __/ | | | | | |  __/_|
+ \____/|_| |_| |_| |_|\___|_|_|\___/(_) |_|  |_|_|_|  \___| |_| |_| |_|\___(_)
+-->
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="">
+    <meta name="description" content="Portfolio showcasing my projects in and out of school.">
     <meta name="author" content="Stuart Smith">
     <!--link rel="icon" href="favicon.ico">-->
 
@@ -40,8 +48,8 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="toggle about"><a href="#about">About</a></li>
-            <li class="toggle portfolio active"><a href="#portfolio">Portfolio</a></li>
+            <li class="toggle"><a href="#about">About</a></li>
+            <li class="toggle active"><a class="page-scroll" href="#portfolio">Portfolio</a></li>
             <li class="contact" data-toggle="modal" data-target="#contactForm"><a href="#contact">Contact</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
@@ -58,7 +66,7 @@
       <!-- Main component for a primary marketing message or call to action -->
 
 
-      <div id="aboutContent">
+      <div id="about" class="aboutContent">
         Hello guys.
       </div>
 
@@ -82,30 +90,49 @@
       </div> <!-- END OF CONTACT FORM -->
     </div> <!-- container -->
 
-    <div class="portfolio-feed container-fluid">
+    <div id="portfolio" class="portfolio-feed container-fluid">
         <div class="row no-gutter">
-            <div class="col-xs-4 col-md-4">
-              <a href="#"><p class="project-title text-center">Transit Pulse <br/> (Android)</p></a>
+            <div class="col-md-4">
+              <h3 class="project-title text-center">Transit Pulse <br/> (Android)</h3>
+              <a class="project-title" href="https://github.com/mastrgamr/MTA-Pulse" target="_blank">
+                  <center><button class="btn btn-primary">Source</button></center>
+              </a>
             </div>
-            <div class="col-xs-4 col-md-4">
-                  <img class="img-responsive" src="https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/e15/11247119_899333373456412_936051424_n.jpg">
+            <div class="col-md-4">
+                <h3 class="project-title text-center">Checkers<br/> (Java / Swing)</h3>
+                <a class="project-title" href="https://github.com/mastrgamr/Checkers2P-GUI" target="_blank">
+                    <center><button class="btn btn-primary">Source</button></center>
+                </a>
             </div>
-            <div class="col-xs-4 col-md-4">
-                  <img class="img-responsive" src="https://scontent.cdninstagram.com/hphotos-xpf1/t51.2885-15/e15/11137829_809548605802191_421762649_n.jpg">
+            <div class="col-md-4">
+                <h3 class="project-title text-center">Pong War <br/> (C# / XNA)</h3>
+                <a class="project-title" href="https://github.com/mastrgamr/PongWar" target="_blank">
+                    <center><button class="btn btn-primary">Source</button></center>
+                </a>
             </div>
-        </div>
+        </div> <!-- ROW 1 -->
+
         <div class="row no-gutter">
-            <div class="col-xs-4 col-md-4">
-                  <img class="img-responsive" src="https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/e15/11325965_114532128881729_1042379851_n.jpg">
+            <div class="col-md-4">
+              <h3 class="project-title text-center">Dummy Project <br/> (Lang)</h3>
+              <a class="project-title" href="#">
+                  <center><button class="btn btn-primary">Source</button></center>
+              </a>
             </div>
-            <div class="col-xs-4 col-md-4">
-                  <img class="img-responsive" src="https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/e15/11247119_899333373456412_936051424_n.jpg">
+            <div class="col-md-4">
+                <h3 class="project-title text-center">Dummy Project<br/> (Lang)</h3>
+                <a class="project-title" href="#">
+                    <center><button class="btn btn-primary">Source</button></center>
+                </a>
             </div>
-            <div class="col-xs-4 col-md-4">
-                  <img class="img-responsive" src="https://scontent.cdninstagram.com/hphotos-xpf1/t51.2885-15/e15/11137829_809548605802191_421762649_n.jpg">
+            <div class="col-md-4">
+                <h3 class="project-title text-center">Dummy Project <br/> (Lang)</h3>
+                <a class="project-title" href="#">
+                    <center><button class="btn btn-primary">Source</button></center>
+                </a>
             </div>
-        </div>
-    </div>
+        </div> <!-- ROW 2 -->
+    </div><!-- PORTFOLIO SECTION -->
 
     <div class="container">
       <footer class="footer">
