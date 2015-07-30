@@ -21,9 +21,10 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -33,8 +34,6 @@
   </head>
 
   <body>
-
-    <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -61,10 +60,44 @@
       </div>
     </nav>
 
+<!--
+    <nav>
+        <div id="sidenav" class="nav-animation animated">
+            <div class="sidenav-row row no-gutter">
+                <div class="col-md-4">
+                  <h3>SS</h3>
+                </div>
+             </div>
+            <div class="divider-row row no-gutter"></div>
+            <div class="sidenav-row row no-gutter">
+                <div class="col-md-4">
+                    <a class="sidenav-col" href="#">
+                        <img src="images/twitter2.png" height="15" />
+                        <h3 class="animated fadeIn project-title text-center">About</h3>
+                    </a>
+                </div>
+             </div>
+             <div class="sidenav-row row no-gutter">
+                <div class="col-md-4">
+                    <a class="sidenav-col" href="#">
+                        <img src="images/twitter2.png" height="15" />
+                        <h3 class="animated fadeIn project-title text-center">Portfolio</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="sidenav-row row no-gutter">
+                <div class="col-md-4">
+                    <a class="sidenav-col" href="#">
+                        <img src="images/twitter2.png" height="15" />
+                        <h3 class="animated fadeIn project-title text-center">Contact</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+-->
+
     <div class="container">
-
-      <!-- Main component for a primary marketing message or call to action -->
-
 
       <div id="about" class="aboutContent">
         Hello guys.
@@ -90,49 +123,66 @@
       </div> <!-- END OF CONTACT FORM -->
     </div> <!-- container -->
 
+    <!-- PORTFOLIO SECTION -->
     <div id="portfolio" class="portfolio-feed container-fluid">
-        <div class="row no-gutter">
-            <div class="col-md-4">
-              <h3 class="project-title text-center">Transit Pulse <br/> (Android)</h3>
-              <a class="project-title" href="https://github.com/mastrgamr/MTA-Pulse" target="_blank">
-                  <center><button class="btn btn-primary">Source</button></center>
-              </a>
+        <div class="port-row row no-gutter">
+            <div class="port-col port-col-1 col-md-4">
+                <div class="project-info">
+                  <h3 class="animated fadeIn project-title text-center">Transit Pulse <br/> (Android)<br/></h3>
+                  <p class="project-desc text-center">
+                      A transit app that monitors real time departure and arrival times of surrounding
+                      metro transportation.
+                  </p>
+                  <a class="project-title" href="https://github.com/mastrgamr/MTA-Pulse" target="_blank">
+                      <center><button class="btn btn-primary">Source</button></center>
+                  </a>
+                </div>
             </div>
-            <div class="col-md-4">
-                <h3 class="project-title text-center">Checkers<br/> (Java / Swing)</h3>
-                <a class="project-title" href="https://github.com/mastrgamr/Checkers2P-GUI" target="_blank">
-                    <center><button class="btn btn-primary">Source</button></center>
-                </a>
+            <div class="port-col port-col-2 col-md-4">
+                <div class="project-info">
+                    <h3 class="animated fadeIn project-title text-center">Checkers<br/> (Java / Swing)</h3>
+                    <p class="project-desc text-center">
+                        Simple tournament style checkers game.
+                    </p>
+                    <a class="project-title" href="https://github.com/mastrgamr/Checkers2P-GUI" target="_blank">
+                        <center><button class="btn btn-primary">Source</button></center>
+                    </a>
+                </div>
             </div>
-            <div class="col-md-4">
-                <h3 class="project-title text-center">Pong War <br/> (C# / XNA)</h3>
-                <a class="project-title" href="https://github.com/mastrgamr/PongWar" target="_blank">
-                    <center><button class="btn btn-primary">Source</button></center>
-                </a>
+            <div class="port-col port-col-3 col-md-4">
+                <div class="project-info">
+                    <h3 class="animated fadeIn project-title text-center">Pong War <br/> (C# / XNA)</h3>
+                    <p class="project-desc text-center">
+                        2-player sudden death style game that is a mix between the classic games Pong and Breakout.
+                    </p>
+                    <a class="project-title" href="https://github.com/mastrgamr/PongWar" target="_blank">
+                        <center><button class="btn btn-primary">Source</button></center>
+                    </a>
+                </div>
             </div>
         </div> <!-- ROW 1 -->
 
-        <div class="row no-gutter">
-            <div class="col-md-4">
+        <div class="port-row row no-gutter">
+            <div class="port-col col-md-4">
               <h3 class="project-title text-center">Dummy Project <br/> (Lang)</h3>
               <a class="project-title" href="#">
                   <center><button class="btn btn-primary">Source</button></center>
               </a>
             </div>
-            <div class="col-md-4">
+            <div class="port-col col-md-4">
                 <h3 class="project-title text-center">Dummy Project<br/> (Lang)</h3>
                 <a class="project-title" href="#">
                     <center><button class="btn btn-primary">Source</button></center>
                 </a>
             </div>
-            <div class="col-md-4">
+            <div class="port-col col-md-4">
                 <h3 class="project-title text-center">Dummy Project <br/> (Lang)</h3>
                 <a class="project-title" href="#">
                     <center><button class="btn btn-primary">Source</button></center>
                 </a>
             </div>
         </div> <!-- ROW 2 -->
-    </div><!-- PORTFOLIO SECTION -->
+    </div><!-- END PORTFOLIO SECTION -->
 
     <div class="container">
       <footer class="footer">

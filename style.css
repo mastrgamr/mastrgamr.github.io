@@ -16,11 +16,6 @@ a:link, a:visited, a:active {
     text-decoration: none;
 }
 
-a:hover {
-    color: #FFF;
-    font-weight: bold;
-}
-
 h3 {
     color: #FFF;
     font-weight: bold;
@@ -35,23 +30,77 @@ h3 {
   font-weight: bold;
 }
 
-.row {
+#sidenav {
+    position: fixed;
+    top: 0px;
+    z-index: 99;
+    width: 50px;
+    height: 100%;
+    background: #F1F1F1;
+    border-right: 2px solid #BBBBBB;
+    white-space: nowrap;
+    overflow-x: hidden;
+    padding-left: 15px;
+}
+
+.port-row {
   height:50%;
 }
 
-.col-md-4 {
+.port-col {
   height: 100%;
-  padding:1px;
+  padding:15px;
   background-image: url("https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/e15/11325965_114532128881729_1042379851_n.jpg");
   background-size: cover;
 }
+
+.port-col-1 {
+    background-image: url("images/screens/tp-screen.png");
+    background-color: #AAAAAA;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.port-col-2 {
+    background-image: url("images/screens/checkers2p-screen.png");
+    background-size: cover;
+}
+.port-col-3 {
+    background-image: url("images/screens/pongwar-screen.png");
+    background-size: cover;
+}
+
+.sidenav-row {
+    margin-bottom: 15px;
+}
+.sidenav-col {
+    display: flex;
+}
+
+.sidenav-bot {
+    bottom: 100px;
+}
+
+ .divider-row {
+     margin-bottom: 15px;
+ }
 
 .project-title {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    text-shadow: 2px 2px 2px black;
+}
+.project-desc {
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-shadow: 1px 1px 3px black;
+}
 
-    text-shadow: 2px 2px 1px black;
+.project-info {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .footer {
