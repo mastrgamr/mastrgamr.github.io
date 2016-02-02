@@ -1,5 +1,10 @@
 //Where my jQuery and Vanilla go.... mmmmm, Vanilla
 $(document).ready(function() {
+    
+    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+    particlesJS.load('particles-js', 'particles.json', function() {
+      console.log('callback - particles.js config loaded');
+    });
 	
     //ignore the function below
 	$( '#play-btn' ).click(function() {  
