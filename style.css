@@ -7,38 +7,15 @@ html {
 	width: 100%;
 }
 
-#nav {
-	width: 100%;
-	padding: 25px 25px 25px 25px;
-	display: inline-flex;
-    box-shadow: 0 2px 3px rgba(0,0,0,.4);
-    margin-bottom: -85px;
-    background: rgba(100,100,100,.92);
-}
-
-.fixed-nav {
-	position: fixed;
-    top: 0;
-    z-index: 9000;
-}
-
 body {
 	margin: 0px;
 }
 
-.social-nav-icons {
-	/*floats right, since display = inline-flex*/
-	margin-left: auto;
-	
-}
-section > img,
-section > a {
-	margin: 10px;
-	vertical-align: middle;
-}
-
 /*HEADER INFORMATION AND TAGLINE*/
 .header {
+	position: fixed;
+	width: 100%;
+	top: 0;
 	margin-left: auto;
 	margin-right: auto;
 	background: url("images/mat_wallpaper.jpg") no-repeat center center fixed;
@@ -58,20 +35,54 @@ section > a {
     font-size: 1.25rem;
 }
 
-.content {
-	max-width: 860px;
+/*NAVIGATION*/
+nav {
+	position: relative;
+	width: 100%;
+	padding: 15px 25px 15px 25px;
+	display: inline-flex;
+    box-shadow: 0 2px 3px rgba(0,0,0,.4);
+    margin-bottom: -78px;
+    background: rgba(100,100,100,.92);
+}
+
+.fixed-nav {
+	position: fixed;
+    top: 0;
+    z-index: 9000;
+}
+
+.social-nav-icons {
+	/*floats right, since display = inline-flex*/
+	margin-left: auto;
+}
+section > img,
+section > a {
+	margin: 10px;
+	vertical-align: middle;
+}
+
+.content, .sections {
 	margin-left: auto;
 	margin-right: auto;
 	
-    /*Line below completely ignored due to site.js*/
-	padding-top: 97px; /*Theres 40px separation going on. may need rewrite*/
+}
+
+.content {
+	position: relative;
+	margin-top: 90vh;
+	background: #f2f2e8;
+}
+
+.sections {
+	max-width: 860px;
+    padding-top: 78px;
 }
 
 /*ignore the code below*/
 #play-btn {
 	cursor: pointer;
 	position: absolute;
-	/**/
 	background: url(images/playBtn.png) no-repeat scroll center center/127px 81px rgba(123,121,106,0.5);
 	display: flex;
 	opacity: 1;
