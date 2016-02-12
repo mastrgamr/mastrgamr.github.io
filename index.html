@@ -21,7 +21,7 @@
 <body ng-app="myApp">
 
 	<!----- Header Content ----->
-	<header id="particles-js" class="header">
+	<header id="particles-js" class="header" hide-sm>
 		<div class="tagline">
 			<p class="animated bounceIn">I am STUART.
 				<br /> I like Programming.</p>
@@ -32,9 +32,13 @@
 		<!----- NAVIGATION MENU ----->
 		<nav id="nav">
 			<section class="links">
-				<md-button href="#">PORTFOLIO</md-button>
-				<md-button href="#">ABOUT</md-button>
-				<md-button href="#">CONTACT</md-button>
+			
+				<md-button ng-click="toggleSidenav('left')" hide-gt-sm class="md-icon-button">
+					<ng-md-icon icon="menu"></ng-md-icon>
+				</md-button>
+				<md-button href="#" hide-sm>PORTFOLIO</md-button>
+				<md-button href="#" hide-sm>ABOUT</md-button>
+				<md-button href="#" hide-sm>CONTACT</md-button>
 			</section>
 			<section class="social-nav-icons">
 				<a href="https://twitter.com/mastrgamr" target="_blank"><img src="images/twitter.png" width="32" alt="Twitter" /></a>
@@ -66,8 +70,13 @@
 		</section>
 
 		<section id="about" class="animated">
-			<div flex layout="column" layout-sm="row" layout-md="row" layout-lg="row">
-				<md-card class="animated slideInLeft">
+			
+			<div class="feature">
+				<center><img src="images/gitContribs.png" /></center>
+			</div>
+			
+			<div flex layout="column" layout-sm="column" layout-md="row" layout-lg="row">
+				<md-card class="animated">
 					<img ng-src="http://placehold.it/300x200" class="md-card-image" alt="Washed Out">
 					<md-card-title>
 						<md-card-title-text>
@@ -95,7 +104,7 @@
 						<md-button class="md-raised" href="#">Download (via Play Store)</md-button>
 					</md-card-actions>
 				</md-card>
-				<md-card class="animated slideInRight">
+				<md-card class="animated">
 					<img ng-src="http://placehold.it/300x200" class="md-card-image" alt="Washed Out">
 					<md-card-title>
 						<md-card-title-text>
@@ -123,7 +132,7 @@
 				</md-card>
 			</div>
 			<!-- SECOND ROW -->
-			<div flex layout="column" layout-sm="row" layout-md="row" layout-lg="row">
+			<div flex layout="column" layout-sm="column" layout-md="row" layout-lg="row">
 				<md-card class="animated slideInLeft">
 					<img ng-src="http://placehold.it/300x200" class="md-card-image" alt="Washed Out">
 					<md-card-title>
@@ -189,6 +198,10 @@
 		</div>
 	</div>
 
+	<footer>
+		&copy; Stuart Smith - Software Engineer in training
+	</footer>
+	
 	<!-- required includes -->
 	<!-- Angular Material requires Angular.js Libraries -->
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>

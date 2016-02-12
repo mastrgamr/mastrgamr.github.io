@@ -9,6 +9,7 @@ html {
 
 body {
 	margin: 0px;
+	overflow-x: hidden;
 }
 
 /*HEADER INFORMATION AND TAGLINE*/
@@ -77,6 +78,17 @@ section > a {
 .sections {
 	max-width: 860px;
     padding-top: 78px;
+}
+
+.feature {
+	margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+	overflow-x: hidden;
+}
+
+footer {
+	padding: 15px 15px;
+	background: #555555;
 }
 
 /*ignore the code below*/
