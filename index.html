@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  ____  _       _          _ _       _   _    _ _                           _
+ / __ \| |     | |        | | |     | | | |  | (_)                         | |
+| |  | | |__   | |__   ___| | | ___ | | | |__| |_ _ __ ___   _ __ ___   ___| |
+| |  | | '_ \  | '_ \ / _ \ | |/ _ \| | |  __  | | '__/ _ \ | '_ ` _ \ / _ \ |
+| |__| | | | | | | | |  __/ | | (_) |_| | |  | | | | |  __/ | | | | | |  __/_|
+ \____/|_| |_| |_| |_|\___|_|_|\___/(_) |_|  |_|_|_|  \___| |_| |_| |_|\___(_)
+-->
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body ng-app="portfolioApp" ng-controller="portfolioProjects" ng-cloak>
+  <div class="navbar-fixed hide-on-med-and-up">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo center">SSmith</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-sm">
+          <li><a href="#"><i class="material-icons">perm_identity</i></a></li>
+          <li><a href="#"><i class="material-icons">perm_identity</i></a></li>
+          <li><a href="#"><i class="material-icons">perm_identity</i></a></li>
+        </ul>
+        <ul class="side-nav fixed" id="mobile-demo">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Resume</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="navbar-fixed hide-on-small-only">
+    <div class="nav-wrapper">
+      <ul class="side-nav fixed" id="mobile-demo">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Resume</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <main>
+    <div class="wrap">
+      <pre>
+        <span class="text">
+                      "<span class="text">Stuart Smith</span>": {
+                        "<span class="text">Email</span>": "<a href="mailto:stuartsmith@outlook.com">stuartsmith@outlook.com</a>",
+                        "<span class="text">GitHub</span>": "<a href="https://github.com/mastrgamr" target="_blank">mastrgamr</a>",
+                        "<span class="text">Twitter</span>": "<a href="https://twitter.com/mastrgamr" target="_blank">@mastrgamr</a>",
+                        "<span class="text">LinkedIn</span>": "<a href="https://linkedin.com/in/stuartesmith" target="_blank">stuartesmith</a>",
+                        "<span class="text">Favorite Tech</span>": [
+                          "<span class="text">Java</span>",
+                          "<span class="text">Android</span>",
+                          "<span class="text">Javascript</span>",
+                          "<span class="text">NodeJS</span>"
+                        ]
+                      }
+        </pre>
+    </div>
+      
+      <!-- TODO/FIXME: GET the fucking images to show while in ng-repeat!!!! -->
+      <div class="parallax-container hide-on-small-only">
+        <div class="parallax">
+          <img ng-src="{{rows[0].imageurl}}" />
+        </div>
+      </div>
+      <div class="section black">
+        <div class="row project-info">
+          <h2>{{rows[0].name}}</h2>
+            <h5>{{rows[0].time}}</h5>
+            <center>
+              <p>{{rows[0].description}}</p>
+              <span ng-repeat="tech in rows[0].tech" class="label label-badge">
+              {{tech}}
+            </span>
+            </center>
+
+            <ul>
+              <li ng-repeat="role in rows[0].roles">
+                {{role}}
+              </li>
+            </ul>
+        </div>
+      </div>
+      
+      <div class="parallax-container hide-on-small-only">
+        <div class="parallax">
+          <img ng-src="{{rows[1].imageurl}}" />
+        </div>
+      </div>
+      <div class="section black">
+        <div class="row project-info">
+          <h2>{{rows[1].name}}</h2>
+            <h5>{{rows[1].time}}</h5>
+            <center>
+              <p>{{rows[1].description}}</p>
+              <span ng-repeat="tech in rows[1].tech" class="label label-badge">
+              {{tech}}
+            </span>
+            </center>
+
+            <ul>
+              <li ng-repeat="role in rows[1].roles">
+                {{role}}
+              </li>
+            </ul>
+        </div>
+      </div>
+      
+      <div class="parallax-container hide-on-small-only">
+        <div class="parallax">
+          <img ng-src="{{rows[2].imageurl}}" />
+        </div>
+      </div>
+      <div class="section black">
+        <div class="row project-info">
+          <h2>{{rows[2].name}}</h2>
+            <h5>{{rows[2].time}}</h5>
+            <center>
+              <p>{{rows[2].description}}</p>
+              <span ng-repeat="tech in rows[2].tech" class="label label-badge">
+              {{tech}}
+            </span>
+            </center>
+
+            <ul>
+              <li ng-repeat="role in rows[2].roles">
+                {{role}}
+              </li>
+            </ul>
+        </div>
+      </div>
+  </main>
+
+  <script src="js/jquery.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script src="js/app.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.js-fullheight').css('height', $(window).height());
+      $('.parallax').parallax();
+      $('.button-collapse').sideNav({
+          menuWidth: 300, // Default is 240
+          edge: 'left', // Choose the horizontal origin
+          closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        }
+      );
+    });
+  </script>
+</body>
+
+</html>

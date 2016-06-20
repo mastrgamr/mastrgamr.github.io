@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Transit Pulse",
+    "imageurl": "../background.jpg",
+    "description": "A mobile app that utilizes real-time transit data provided by NYC's MTA",
+    "time": "January 2015 - Present",
+    "tech": [
+      "Android",
+      "Retrofit",
+      "Mapbox",
+      "Firebase",
+      "Google Protocol Buffers"
+    ],
+    "roles": [
+      "Implement android app using Retrofit, RxJava, Google Protocol Buffers, GSON, SimpleXML, Otto"
+    ]
+  },
+  {
+    "name": "uBooks",
+    "imageurl": "../background.jpg",
+    "description": "Mobile App marketplace to help facilitate buy/sell/trade of textbooks and other school materials between CUNY students.",
+    "time": "September 2015 - Present",
+    "tech": [
+      "Android",
+      "iOS",
+      "Retrofit",
+      "Alamofire",
+      "Picasso"
+    ],
+    "roles": [
+      "Assist in implementing Android front end with Retrofit, Picasso, GSON",
+      "Implemented iOS front-end using Swift, with libraries like Alamofire, SQLite.swift, Nuke",
+      "Assist in API design"
+    ]
+  },
+  {
+    "name": " 2P Checkers Tournament",
+    "imageurl": "../background.jpg",
+    "description": "Mobile App marketplace to help facilitate buy/sell/trade of textbooks and other school materials between CUNY students.",
+    "time": "December 2014",
+    "tech": [
+      "Java",
+      "Swing"
+    ],
+    "roles": [
+      "Implemented Checkers Tournament game in Java using the Swing API",
+      "Designed and documented source code",
+      "Uploaded to GitHub - http://git.io/89pVTg"
+    ]
+  }
+]
