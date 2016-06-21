@@ -9,6 +9,7 @@
 | |__| | | | | | | | |  __/ | | (_) |_| | |  | | | | |  __/ | | | | | |  __/_|
  \____/|_| |_| |_| |_|\___|_|_|\___/(_) |_|  |_|_|_|  \___| |_| |_| |_|\___(_)
 -->
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Compiled and minified CSS -->
@@ -18,7 +19,7 @@
 </head>
 
 <body ng-app="portfolioApp" ng-controller="portfolioProjects" ng-cloak>
-  <div class="navbar-fixed hide-on-med-and-up">
+  <div class="navbar-fixed hide-on-large-only">
     <nav>
       <div class="nav-wrapper">
         <a href="#!" class="brand-logo center">SSmith</a>
@@ -45,9 +46,9 @@
       </ul>
     </div>
   </div>
-  
+
   <main>
-    <div class="wrap">
+    <div style="width:200px;overflow:auto">
       <pre>
         <span class="text">
                       "<span class="text">Stuart Smith</span>": {
@@ -62,81 +63,82 @@
                           "<span class="text">NodeJS</span>"
                         ]
                       }
+          </span>
         </pre>
     </div>
-      
-      <!-- TODO/FIXME: GET the fucking images to show while in ng-repeat!!!! -->
-      <div class="parallax-container hide-on-small-only">
-        <div class="parallax">
-          <img ng-src="{{rows[0].imageurl}}" />
-        </div>
+
+    <!-- TODO/FIXME: GET the fucking images to show while in ng-repeat!!!! -->
+    <div class="parallax-container hide-on-small-only">
+      <div class="parallax">
+        <img ng-src="{{rows[0].imageurl}}" />
       </div>
-      <div class="section black">
-        <div class="row project-info">
-          <h2>{{rows[0].name}}</h2>
-            <h5>{{rows[0].time}}</h5>
-            <center>
-              <p>{{rows[0].description}}</p>
-              <span ng-repeat="tech in rows[0].tech" class="label label-badge">
+    </div>
+    <div class="section black">
+      <div class="row project-info">
+        <h2>{{rows[0].name}}</h2>
+        <h5>{{rows[0].time}}</h5>
+        <center>
+          <p>{{rows[0].description}}</p>
+          <span ng-repeat="tech in rows[0].tech" class="label label-badge">
               {{tech}}
             </span>
-            </center>
+        </center>
 
-            <ul>
-              <li ng-repeat="role in rows[0].roles">
-                {{role}}
-              </li>
-            </ul>
-        </div>
+        <ul>
+          <li ng-repeat="role in rows[0].roles">
+            {{role}}
+          </li>
+        </ul>
       </div>
-      
-      <div class="parallax-container hide-on-small-only">
-        <div class="parallax">
-          <img ng-src="{{rows[1].imageurl}}" />
-        </div>
+    </div>
+
+    <div class="parallax-container hide-on-small-only">
+      <div class="parallax">
+        <img ng-src="{{rows[1].imageurl}}" />
       </div>
-      <div class="section black">
-        <div class="row project-info">
-          <h2>{{rows[1].name}}</h2>
-            <h5>{{rows[1].time}}</h5>
-            <center>
-              <p>{{rows[1].description}}</p>
-              <span ng-repeat="tech in rows[1].tech" class="label label-badge">
+    </div>
+    <div class="section black">
+      <div class="row project-info">
+        <h2>{{rows[1].name}}</h2>
+        <h5>{{rows[1].time}}</h5>
+        <center>
+          <p>{{rows[1].description}}</p>
+          <span ng-repeat="tech in rows[1].tech" class="label label-badge">
               {{tech}}
             </span>
-            </center>
+        </center>
 
-            <ul>
-              <li ng-repeat="role in rows[1].roles">
-                {{role}}
-              </li>
-            </ul>
-        </div>
+        <ul>
+          <li ng-repeat="role in rows[1].roles">
+            {{role}}
+          </li>
+        </ul>
       </div>
-      
-      <div class="parallax-container hide-on-small-only">
-        <div class="parallax">
-          <img ng-src="{{rows[2].imageurl}}" />
-        </div>
+    </div>
+
+    <div class="parallax-container hide-on-small-only">
+      <div class="parallax">
+        <img ng-src="{{rows[2].imageurl}}" />
       </div>
-      <div class="section black">
-        <div class="row project-info">
-          <h2>{{rows[2].name}}</h2>
-            <h5>{{rows[2].time}}</h5>
-            <center>
-              <p>{{rows[2].description}}</p>
-              <span ng-repeat="tech in rows[2].tech" class="label label-badge">
+    </div>
+    <div class="section black">
+      <div class="row project-info">
+        <h2>{{rows[2].name}}</h2>
+        <h5>{{rows[2].time}}</h5>
+        <center>
+          <p>{{rows[2].description}}</p>
+          <span ng-repeat="tech in rows[2].tech" class="label label-badge">
               {{tech}}
             </span>
-            </center>
+        </center>
 
-            <ul>
-              <li ng-repeat="role in rows[2].roles">
-                {{role}}
-              </li>
-            </ul>
-        </div>
+        <ul>
+          <li ng-repeat="role in rows[2].roles">
+            {{role}}
+          </li>
+        </ul>
       </div>
+    </div>
   </main>
 
   <script src="js/jquery.min.js"></script>
@@ -145,15 +147,14 @@
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
   <script src="js/app.js"></script>
   <script type="text/javascript">
-    $(document).ready(function() {
+    $(document).ready(function () {
       $('.js-fullheight').css('height', $(window).height());
       $('.parallax').parallax();
       $('.button-collapse').sideNav({
-          menuWidth: 300, // Default is 240
-          edge: 'left', // Choose the horizontal origin
-          closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-        }
-      );
+        menuWidth: 300, // Default is 240
+        edge: 'left', // Choose the horizontal origin
+        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      });
     });
   </script>
 </body>
