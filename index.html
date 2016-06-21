@@ -40,11 +40,11 @@
   </div>
   <div class="navbar-fixed hide-on-small-only">
     <div class="nav-wrapper">
-      <ul class="side-nav fixed blue-grey" id="mobile-demo">
+      <ul class="side-nav fixed blue-grey darken-4" id="mobile-demo">
         <li><a href="#about" class="white-text center-align">About</a></li>
         <li><a href="#projects" class="white-text center-align">Projects</a></li>
         <li><a href="#resume" class="white-text center-align">Resume</a></li>
-        <li><a href="#" class="white-text center-align">Contact</a></li>
+        <li><a href="#modal1" class="white-text center-align modal-trigger">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -165,6 +165,17 @@
     </div>
   </main>
 
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4 class="black-text">Email</h4>
+      <p class="black-text">Bacon Ipsum</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-red btn">Send</a>
+    </div>
+  </div>
+
   <script src="js/jquery.min.js"></script>
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
@@ -180,6 +191,13 @@
         closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
       });
       $('.scrollspy').scrollSpy();
+      // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+      $('.modal-trigger').leanModal({
+        dismissible: true, // Modal can be dismissed by clicking outside of the modal
+        opacity: .7, // Opacity of modal background
+        in_duration: 300, // Transition in duration
+        out_duration: 300 // Transition out duration
+      });
     });
   </script>
 </body>
