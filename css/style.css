@@ -102,22 +102,21 @@ a:hover {
 }
 
 /* VIA BOOTSTRAP.CSS */
-
 .label {
-  display: inline;
-  padding: .2em .6em .3em;
-  margin: 3px;
-  font-size: 75%;
-  font-weight: 700;
-  line-height: 1;
-  color: #fff;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: .25em;
+    display: inline-flex;
+    padding: .2em .6em .3em;
+    margin: 3px;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
 }
 
 .label-badge {
+  color: darkslateblue;
   background-color: #f0ad4e;
 }
 
