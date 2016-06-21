@@ -10,7 +10,7 @@ body {
 pre {
   font-family: Consolas, "Consolas", Menlo, Courier, monospace;
   overflow: hidden;
-  margin: 1rem 0
+  margin: 1rem 0;
 }
 
 .wrap {
@@ -29,20 +29,22 @@ pre {
 
 .project-info {
   /*background: #1D2E40;*/
-  padding-left: 80px;
-  padding-right: 80px;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  /*margin-left: 50%;
-  min-height: 70vh;*/
-}
-
-.project-info-content {
-  margin-top: 50%;
+  padding: 80px 100px;
 }
 
 .parallax-container {
   height: "400px";
+}
+
+.section-title {
+  margin: 0;
+  padding: 15px 0;
+  background: #333333;
+}
+
+.about-info {
+  margin: 0;
+  padding: 35px 70px;
 }
 
 /*-----------SCREEN CONSIDERATIONS-----------------*/
@@ -84,7 +86,6 @@ pre {
 
 .text {
   color: #069ECC;
-  width: inherit;
 }
 
 a {

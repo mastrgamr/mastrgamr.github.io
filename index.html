@@ -11,6 +11,7 @@
 -->
 
 <head>
+  <title>Stuart</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
@@ -20,9 +21,9 @@
 
 <body ng-app="portfolioApp" ng-controller="portfolioProjects" ng-cloak>
   <div class="navbar-fixed hide-on-large-only">
-    <nav>
+    <nav class="blue-grey">
       <div class="nav-wrapper">
-        <a href="#!" class="brand-logo center">SSmith</a>
+        <a href="#!" class="brand-logo center">W.I.P.</a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-sm">
           <li><a href="#"><i class="material-icons">perm_identity</i></a></li>
@@ -30,25 +31,26 @@
           <li><a href="#"><i class="material-icons">perm_identity</i></a></li>
         </ul>
         <ul class="side-nav fixed" id="mobile-demo">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Resume</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#resume">Resume</a></li>
         </ul>
       </div>
     </nav>
   </div>
   <div class="navbar-fixed hide-on-small-only">
     <div class="nav-wrapper">
-      <ul class="side-nav fixed" id="mobile-demo">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Resume</a></li>
+      <ul class="side-nav fixed blue-grey" id="mobile-demo">
+        <li><a href="#about" class="white-text center-align">About</a></li>
+        <li><a href="#projects" class="white-text center-align">Projects</a></li>
+        <li><a href="#resume" class="white-text center-align">Resume</a></li>
+        <li><a href="#" class="white-text center-align">Contact</a></li>
       </ul>
     </div>
   </div>
 
   <main>
-    <div style="width:200px;overflow:auto">
+    <div class="wrap">
       <pre>
         <span class="text">
                       "<span class="text">Stuart Smith</span>": {
@@ -66,14 +68,32 @@
           </span>
         </pre>
     </div>
-
+    
+    <!-- ABOUT SECTION -->
+    <div id="about" class="scrollspy">
+      <h3 class="section-title center-align">About</h3>
+    </div>
+    <div class="center-align blue-grey darken-3">
+      <div>
+        <img src="http://gravatar.com/avatar/f77b2a955f419eff58afd4b5c8a40c07.jpg?s=256" style="margin: 25px;" class="circle responsive-img z-depth-2"/>
+      </div>
+      <p class="about-info">
+        Hi, my name's Stuart, and I like to code. I'm a senior college student persuing a career in Software Engineering. My personal projects deal with a range of languages and framworks including Java, Swift and Javascript. Check out my <a href="https://github.com/mastrgamr" target="_blank">Github</a>!
+      </p>
+    </div>
+    
+    <!-- PROJECT INFORMATIONS SECTION -->
+    <div id="projects" class="scrollspy">
+      <h3 class="section-title center-align">Projects</h3>
+    </div>
+    
     <!-- TODO/FIXME: GET the fucking images to show while in ng-repeat!!!! -->
     <div class="parallax-container hide-on-small-only">
       <div class="parallax">
         <img ng-src="{{rows[0].imageurl}}" />
       </div>
     </div>
-    <div class="section black">
+    <div class="section blue-grey darken-3">
       <div class="row project-info">
         <h2>{{rows[0].name}}</h2>
         <h5>{{rows[0].time}}</h5>
@@ -84,8 +104,8 @@
             </span>
         </center>
 
-        <ul>
-          <li ng-repeat="role in rows[0].roles">
+        <ul class="collection">
+          <li class="collection-item blue-grey darken-2" ng-repeat="role in rows[0].roles">
             {{role}}
           </li>
         </ul>
@@ -97,7 +117,7 @@
         <img ng-src="{{rows[1].imageurl}}" />
       </div>
     </div>
-    <div class="section black">
+    <div class="section blue-grey darken-3">
       <div class="row project-info">
         <h2>{{rows[1].name}}</h2>
         <h5>{{rows[1].time}}</h5>
@@ -108,8 +128,8 @@
             </span>
         </center>
 
-        <ul>
-          <li ng-repeat="role in rows[1].roles">
+        <ul class="collection">
+          <li class="collection-item blue-grey darken-2" ng-repeat="role in rows[1].roles">
             {{role}}
           </li>
         </ul>
@@ -121,7 +141,7 @@
         <img ng-src="{{rows[2].imageurl}}" />
       </div>
     </div>
-    <div class="section black">
+    <div class="section blue-grey darken-3">
       <div class="row project-info">
         <h2>{{rows[2].name}}</h2>
         <h5>{{rows[2].time}}</h5>
@@ -132,12 +152,16 @@
             </span>
         </center>
 
-        <ul>
-          <li ng-repeat="role in rows[2].roles">
+        <ul class="collection">
+          <li class="collection-item blue-grey darken-2" ng-repeat="role in rows[2].roles">
             {{role}}
           </li>
         </ul>
       </div>
+    </div>
+    
+    <div id="resume" class="scrollspy">
+      <h3 class="section-title center-align">Resume</h3>
     </div>
   </main>
 
@@ -151,10 +175,11 @@
       $('.js-fullheight').css('height', $(window).height());
       $('.parallax').parallax();
       $('.button-collapse').sideNav({
-        menuWidth: 300, // Default is 240
+        menuWidth: 240, // Default is 240
         edge: 'left', // Choose the horizontal origin
         closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
       });
+      $('.scrollspy').scrollSpy();
     });
   </script>
 </body>
