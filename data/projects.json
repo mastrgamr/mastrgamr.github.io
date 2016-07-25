@@ -1,7 +1,7 @@
 [
   {
     "name": "Transit Pulse",
-    "imageurl": "../background.jpg",
+    "imageurl": "../images/tp.png",
     "description": "A mobile app that utilizes real-time transit data provided by NYC's MTA",
     "time": "January 2015 - Present",
     "tech": [
@@ -17,7 +17,7 @@
   },
   {
     "name": "uBooks",
-    "imageurl": "../background.jpg",
+    "imageurl": "../images/ub.png",
     "description": "Mobile App marketplace to help facilitate buy/sell/trade of textbooks and other school materials between CUNY students.",
     "time": "September 2015 - Present",
     "tech": [
